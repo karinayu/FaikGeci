@@ -1,0 +1,205 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background: rgb(245,245,245,1);
+}
+.sidebar {
+    margin: 0;
+    padding: 0;
+    width: 330px;
+    background-color: #191A1C;
+    position: fixed;
+    height: 100vh;
+    overflow: hidden;
+}
+.sidebar *:not(img) {
+    padding: 0 30px 30px 30px;
+    color:#ffffff;
+    display: block;
+}
+.sidebar h1 {
+    font-size: 33px;
+    font-family: 'OpenSansBold', sans-serif;
+}
+.sidebar p {
+    font-size: 14px;
+    font-family: 'OpenSans', sans-serif;
+}
+.sidebar .social-media {
+    display: flex;
+}
+.sidebar .social-media a {
+    padding: 0;
+    margin-right: 14px;
+}
+.main {
+    min-height: calc(100vh - 70px);
+    font-size: 16px;
+}
+.main, footer, header {
+    margin-left: 330px;
+    padding: 0 80px;
+}
+header {
+    padding-top: 45px;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+.search {
+    width: 290px;
+}
+.search input {
+    position: relative;
+    border: none;
+    color: #C4C4C4;
+    border-bottom: 2px solid #C4C4C4;
+    font-size: 16px;
+    width: 100%;
+    padding: 0 0 8px 35px;
+    background: url(../img/search.svg) no-repeat 0% -100%;
+}
+input:focus {
+    outline: none;
+}
+::-webkit-input-placeholder {color:#C4C4C4;}
+::-moz-placeholder          {color:#C4C4C4;}/* Firefox 19+ */
+:-moz-placeholder           {color:#C4C4C4;}/* Firefox 18- */
+:-ms-input-placeholder      {color:#C4C4C4;}
+.menu {
+    width: 350px;
+    display: flex;
+    justify-content: space-between;
+}
+.menu a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color:black;
+    font-family: 'OpenSansSemiBold', sans-serif;
+    font-size: 14px;
+}
+.posts-list {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.posts-list .post p {
+    text-align: center;
+    font-family: 'OpenSans', sans-serif;
+}
+.contact, .subscribe {
+    text-align: center;
+    padding: 40px 0;
+    font-size: 16px;
+    font-family: 'OpenSansLight', sans-serif;
+}
+.contact p, .subscribe p {
+    width: 60%;
+    margin-left: 20%;
+    padding-bottom: 40px;
+}
+.contact .title, .subscribe .title{
+    font-family: 'OpenSans', sans-serif;
+}
+.contact a {
+    color: #000000;
+    font-family: 'OpenSans', sans-serif;
+}
+.subscribe {
+    background: #ffffff;
+}
+.subscribe input, button {
+    width: 200px;
+    height: 40px;
+    border: none;
+    border-radius: 0;
+}
+.subscribe input {
+    background: #F5F5F5;
+    padding: 0 20px;
+    margin-right: 20px;
+}
+button {
+    background: #191A1C;
+    color: #ffffff;
+    font-family: 'OpenSansSemiBold', sans-serif;
+}
+.main .banner {
+    display: flex;
+    justify-content: space-between;
+}
+.main .banner img {
+    height: 400px;
+}
+.main .banner .description {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.main .banner .description .title {
+    font-family: 'OpenSans', sans-serif;
+    font-size: 16px;
+}
+.main .banner .description p {
+    font-size: 24px;
+    font-family: 'OpenSansLight', sans-serif;
+    text-align: center;
+    width: 80%;
+}
+.main .banner {
+    font-family: 'OpenSans', sans-serif;
+    font-size: 16px;
+    width: fit-content;
+}
+.insta-link, .insta-preview {
+    display: flex;
+    justify-content: space-between;
+}
+.insta-link {
+    padding: 40px 0;
+}
+.insta-link p {
+    font-family: 'OpenSans', sans-serif;
+}
+.insta-link .insta {
+    font-size: 24px;
+    font-family: 'OpenSansLight', sans-serif;
+}
+.insta-preview img {
+    width: 220px;
+}
+footer {
+    height: 70px;
+}
+.footer {
+    border-top: 2px solid #191A1C;
+    width: auto;
+    padding-top: 25px;
+    margin-top: 40px;
+    justify-content: space-evenly;
+}
+@font-face {
+    font-family: 'OpenSans', sans-serif;
+    src: url(../fonts/OpenSans-Regular.ttf);
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'OpenSansLight';
+    src: url(../fonts/OpenSans-Light.ttf);
+    font-weight: 700;
+}
+@font-face {
+    font-family: 'OpenSansBold';
+    src: url(../fonts/OpenSans-Bold.ttf);
+    font-weight: 700;
+}
+@font-face {
+    font-family: 'OpenSansSemiBold';
+    src: url(../fonts/OpenSans-SemiBold.ttf);
+    font-weight: 600;
+}
