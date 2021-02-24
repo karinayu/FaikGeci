@@ -82,10 +82,19 @@ input:focus {
     font-size: 14px;
 }
 .posts-list {
-    width: 100%;
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
+}
+.posts-list .post {
+    width: calc((100% / 3) - (4rem / 3));
+    margin-right: 2rem;
+    margin-bottom: 1rem;
+}
+.posts-list .post:nth-child(3n) {
+    margin-right: 0;
+}
+.posts-list .post img {
+    width: 100%;
 }
 .posts-list .post p {
     text-align: center;
@@ -156,12 +165,14 @@ button {
     font-size: 16px;
     width: fit-content;
 }
-.insta-link, .insta-preview {
+.insta-link {
     display: flex;
     justify-content: space-between;
-}
-.insta-link {
     padding: 40px 0;
+}
+.insta-preview {
+    display: flex;
+    flex-wrap: wrap;
 }
 .insta-link p {
     font-family: 'OpenSans', sans-serif;
@@ -171,7 +182,12 @@ button {
     font-family: 'OpenSansLight', sans-serif;
 }
 .insta-preview img {
-    width: 220px;
+    width: calc((100% / 4) - (3rem / 4));
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+.insta-preview img:nth-child(4n) {
+    margin-right: 0;
 }
 footer {
     height: 70px;
