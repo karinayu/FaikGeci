@@ -6,6 +6,9 @@
 body {
     background: rgb(245,245,245,1);
 }
+header .burger {
+    display: none;
+}
 .sidebar {
     margin: 0;
     padding: 0;
@@ -95,6 +98,8 @@ input:focus {
 }
 .posts-list .post img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 .posts-list .post p {
     text-align: center;
@@ -226,6 +231,8 @@ button {
 }
 .post-container .get-large-block .get-large-block-item img {
     width: 100%;
+    height: 90%;
+    object-fit: cover;
 }
 .post-container .get-large-block .get-large-block-item .item-description {
     display: flex;
@@ -250,6 +257,73 @@ footer {
     padding-top: 25px;
     margin-top: 40px;
     justify-content: space-evenly;
+}
+@media (max-width:768px) {
+    .sidebar {
+        width: 100%;
+        height: 70px;
+        position: relative;
+        background: rgb(245,245,245,1);
+    }
+    .sidebar h1 {
+        color: #000000;
+    }
+    .sidebar *:not(h1) {
+        display: none;
+    }
+    header {
+        display: none;
+    }
+    .main, footer {
+        margin-left: 0;
+        padding: 0 80px;
+    }
+    .burger {
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 20px;
+        z-index: 1;
+        margin: 0 50px 0 0;
+    }
+    .burger span {
+        position: absolute;
+        background-color: #000;
+        left:0;
+        width: 100%;
+        height: 3px;
+        border-radius: 5px;
+        top: 9px;
+        transition: all 0.3s ease 0s;
+    }
+    .burger::before,
+    .burger::after {
+        position: absolute;
+        content: '';
+        background-color: #000;
+        width: 100%;
+        height: 3px;
+        border-radius: 5px;
+        left: 0;
+        transition: all 0.3s ease 0s;
+    }
+    .burger::before {
+        top:0;
+    }
+    .burger::after {
+        bottom:0;
+    }
+    .burger.active::before {
+        transform: rotate(45deg);
+        top: 9px;
+    }
+    .burger.active::after {
+        transform: rotate(-45deg);
+        bottom: 9px;
+    }
+    .burger.active span {
+        transform: scale(0);
+    }
 }
 @font-face {
     font-family: 'OpenSans', sans-serif;
