@@ -6,6 +6,10 @@
 body {
     background: rgb(245,245,245,1);
 }
+a {
+    text-decoration: none;
+    color: #000000;
+}
 header .burger {
     display: none;
 }
@@ -91,7 +95,7 @@ input:focus {
 .posts-list .post {
     width: calc((100% / 3) - (4rem / 3));
     margin-right: 2rem;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
 .posts-list .post:nth-child(3n) {
     margin-right: 0;
@@ -323,6 +327,27 @@ footer {
     }
     .burger.active span {
         transform: scale(0);
+    }
+    .posts-list .post {
+        width: calc((100% / 2) - (1rem));
+        margin-right: 1rem;
+        margin-bottom: 2rem;
+    }
+    .insta-preview {
+        display: block;
+    }
+    .insta-preview img {
+        width: 100%;
+        margin-right: 0;
+    }
+    .footer.menu {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 40px;
+    }
+    .footer.menu a {
+        padding-bottom: 15px;
     }
 }
 @font-face {
