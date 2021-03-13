@@ -1,0 +1,12 @@
+extends base.pug
+block content
+    div(class="main")
+        div(class="post-container photo-page")
+            div(class="info")
+                p(class="title") {{ photography.title }}
+                p(class="date") {{ photography.created_at }}
+            div(class="big-pic")
+                img(src="{{ photography.photo_thumbnail.url }}" alt="{{ photography.title }}")
+            div(class="description")
+                p {{ photography.content }}
+            button(id="buy_now_btn{{ photo.title }}") GET THIS IMAGE FOR €{{ photography.price }}
