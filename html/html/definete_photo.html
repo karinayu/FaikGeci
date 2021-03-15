@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <div class="main">
+      <div class="post-container">
+        <div class="info">
+          <p class="title">{{ photography.title }} </p>
+          <p class="date">{{ photography.created_at }}</p>
+        </div>
+        <div class="main-pic"><img src="{{ photography.photo_thumbnail.url }}" alt={{ photography.title }}></div>
+        <div class="description">
+          <p>{{ photography.content }}</p>
+        </div>
+          <button><a href="#" id="buy_now_btn{{ photo.title }}" class="btn btn-primary"> GET THIS IMAGE FOR
+                                €{{ photography.price }} </a></button>
+                                                                            <script src="https://js.stripe.com/v3/"></script>
+                            <script>
+
+                                const buy_now_button{{ photo.title }} = document.querySelector('#buy_now_btn{{ photo.title }}')
+
+                                buy_now_button{{ photo.title }}.addEventListener('click', event => {
+                                    let formData = new FormData();
+                                    formData.append("price", {{ photography.price }});
+                                    formData.append("title", "{{ photography.title }}");
+                                    formData.append("photo", "{{ photography.photo.url }}");
+                                    {#formData.append("photobad", "{{ photography.photoBad.url }}");#}
+                                    formData.append("url", '{{ photography.get_absolute_url }}');
+                                    fetch('/checkout/', {
+                                        method: 'POST',
+                                        body: formData,
+                                    })
+                                        .then((result) => {
+                                            return result.json();
+                                        })
+                                        .then((data) => {
+                                            let stripe = Stripe(data.stripe_public_key);
+
+                                            stripe.redirectToCheckout({
+                                                {{CHECKOUT_SESSION_ID}}
+                                                sessionId: data.session_id
+                                            }).then(function (result) {
+                                            });
+                                        })
+                                })
+                            </script>
+    </div>
+    </div>
+{% endblock %}
+
+
