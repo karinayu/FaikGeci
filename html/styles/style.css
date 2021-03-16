@@ -219,6 +219,20 @@ button {
     font-family: 12px;
     text-align: justify;
 }
+.post-container.photo-page .info .title {
+    font-size: 24px;
+}
+.post-container.photo-page .description {
+    margin: 10px 0;
+}
+.post-container.photo-page button {
+    float: right;
+    margin-top: -25px;
+}
+.royalty {
+    font-size: 12px;
+    font-family: 'OpenSans', sans-serif;
+}
 .get-large-block {
     display: flex;
     flex-wrap: wrap;

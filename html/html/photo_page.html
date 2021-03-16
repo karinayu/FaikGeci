@@ -18,13 +18,15 @@
       <div class="post-container photo-page">
         <div class="info">
           <p class="title">{{ photography.title }}</p>
-          <p class="date">{{ photography.created_at }}</p>
         </div>
-        <div class="big-pic"><img src="{{ photography.photo_thumbnail.url }}" alt="{{ photography.title }}"></div>
+        <div class="main-pic"><img src="{{ photography.photo_thumbnail.url }}" alt="{{ photography.title }}"></div>
         <div class="description">
           <p>{{ photography.content }}</p>
         </div>
-        <button id="buy_now_btn{{ photo.title }}">GET THIS IMAGE FOR €{{ photography.price }}</button>
+        <button id="buy_now_btn{{ photo.title }}">
+          <p class="royalty">Royalty-free </p>
+          <p>GET THIS IMAGE FOR €{{ photography.price }}</p>
+        </button>
       </div>
     </div>
     <footer>
