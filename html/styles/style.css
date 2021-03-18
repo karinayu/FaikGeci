@@ -146,6 +146,8 @@ button.buy {
     color: #ffffff;
     font-family: 'OpenSansSemiBold', sans-serif;
     width: fit-content;
+    padding: 5px 10px;
+    text-align: center;
 }
 .main .banner {
     display: flex;
