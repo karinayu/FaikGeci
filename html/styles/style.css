@@ -141,6 +141,12 @@ button {
     color: #ffffff;
     font-family: 'OpenSansSemiBold', sans-serif;
 }
+button.buy {
+    background: #191A1C;
+    color: #ffffff;
+    font-family: 'OpenSansSemiBold', sans-serif;
+    width: fit-content;
+}
 .main .banner {
     display: flex;
     justify-content: space-between;
@@ -223,11 +229,13 @@ button {
     font-size: 24px;
 }
 .post-container.photo-page .description {
+    width: 100%;
     margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
 }
-.post-container.photo-page button {
-    float: right;
-    margin-top: -25px;
+.post-container.photo-page .description p {
+    margin-right: 10px;
 }
 .royalty {
     font-size: 12px;
