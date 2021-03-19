@@ -149,6 +149,9 @@ button.buy {
     padding: 5px 10px;
     text-align: center;
 }
+button.buy p {
+    color: #ffffff !important;
+}
 .main .banner {
     display: flex;
     justify-content: space-between;
