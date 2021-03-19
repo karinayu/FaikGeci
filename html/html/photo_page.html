@@ -19,13 +19,14 @@
         <div class="info">
           <p class="title">{{ photography.title }}</p>
         </div>
-        <div class="main-pic"><img src="{{ photography.photo_thumbnail.url }}" alt="{{ photography.title }}"></div>
-        <div class="description">
-          <p>{{ photography.content }} qwer tyuiovjsa dbjsfufhfjf jfjghgldsaaaaaaaaaa aaaaaaaa aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaaaaaaaaaa fffffffffffffffffffffffffffffffffff</p>
+        <div class="image-block"><img src="../img/pic2.jpg" alt="{{ photography.title }}">
           <button class="buy">
             <p class="royalty">Royalty-free </p>
             <p>GET THIS IMAGE FOR €{{ photography.price }}</p>
           </button>
+        </div>
+        <div class="description">
+          <p>{{ photography.content }}</p>
         </div>
       </div>
     </div>

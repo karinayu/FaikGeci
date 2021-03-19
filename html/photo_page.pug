@@ -4,10 +4,10 @@ block content
         div(class="post-container photo-page")
             div(class="info")
                 p(class="title") {{ photography.title }}
-            div(class="main-pic")
-                img(src="{{ photography.photo_thumbnail.url }}" alt="{{ photography.title }}")
-            div(class="description")
-                p {{ photography.content }} qwer tyuiovjsa dbjsfufhfjf jfjghgldsaaaaaaaaaa aaaaaaaa aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaaaaaaaaaa fffffffffffffffffffffffffffffffffff
+            div(class="image-block")
+                img(src="../img/pic2.jpg" alt="{{ photography.title }}")
                 button(class="buy")
                     p(class="royalty") Royalty-free 
                     p GET THIS IMAGE FOR €{{ photography.price }}
+            div(class="description")
+                p {{ photography.content }}

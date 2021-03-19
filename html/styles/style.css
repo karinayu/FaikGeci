@@ -145,7 +145,7 @@ button.buy {
     background: #191A1C;
     color: #ffffff;
     font-family: 'OpenSansSemiBold', sans-serif;
-    width: fit-content;
+    width: 25%;
     padding: 5px 10px;
     text-align: center;
 }
@@ -229,6 +229,17 @@ button.buy {
 }
 .post-container.photo-page .info .title {
     font-size: 24px;
+}
+.post-container.photo-page {
+    width: 100%;
+}
+.post-container.photo-page .image-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.post-container.photo-page img {
+    width: 70%;
 }
 .post-container.photo-page .description {
     width: 100%;
