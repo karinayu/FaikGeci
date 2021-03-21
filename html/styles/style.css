@@ -243,6 +243,8 @@ button.buy p {
 }
 .post-container.photo-page img {
     width: 70%;
+    object-fit: cover;
+    aspect-ratio: 16 / 9;
 }
 .post-container.photo-page .description {
     width: 100%;
