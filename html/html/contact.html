@@ -19,7 +19,7 @@
         <div class="description">
           <p class="title">I'M GLAD YOU'RE HERE</p>
           <p>Please feel free to let me know about your request and I'll get back to you as soon as possible!</p>
-          <button>CONTACT FORM</button>
+          <button onclick="showContactForm()">CONTACT FORM</button>
         </div>
       </div>
       <div class="insta-link">
@@ -27,10 +27,27 @@
         <p class="insta">Instagram</p>
         <p>@faikgeci</p>
       </div>
+      <div id="ContactForm" class="dialog_contact_form">
+        <div class="wrapper">
+          <h2>Get in touch</h2>
+        <form action="submit">
+          <input type="name" placeholder="Name">
+          <input type="email" placeholder="Email">
+          <textarea type="text" placeholder="Message"></textarea>
+          <button type="submit">Send</button>
+        </form>
+        </div>
+      </div>
       <div class="insta-preview"><img src="../img/pic1.jpg"><img src="../img/pic1.jpg"><img src="../img/pic1.jpg"><img src="../img/pic1.jpg"></div>
     </div>
     <footer>
       <div class="footer menu"><a href="./index.html">main</a><a href="./gallery.html">gallery</a><a href="./contact.html">contact me</a></div>
     </footer>
+    <script>
+      function showContactForm() {
+        dialog = document.getElementById('ContactForm');
+        dialog.style.display = "block";
+      }
+    </script>
   </body>
 </html>
