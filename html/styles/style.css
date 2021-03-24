@@ -358,6 +358,16 @@ button.buy p {
     font-size: 20px;
     cursor: pointer;
 }
+.main.thank {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.main.thank h1{
+    margin-bottom: 50px;
+    font-family: 'OpenSansBold', sans-serif;
+}
 footer {
     height: 70px;
 }
