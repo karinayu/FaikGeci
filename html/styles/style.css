@@ -368,6 +368,10 @@ button.buy p {
     margin-bottom: 50px;
     font-family: 'OpenSansBold', sans-serif;
 }
+.main.thank button {
+    width: fit-content;
+    padding: 0 10px;
+}
 footer {
     height: 70px;
 }
