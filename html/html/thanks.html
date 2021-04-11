@@ -23,6 +23,16 @@
         <div class="footer menu"><a href="./index.html">home</a><a href="./gallery.html">gallery</a><a
                 href="./contact.html">contact me</a></div>
     </footer>
+    <script>
+        const burger = document.querySelector(".burger");
+        const nav = document.querySelector(".menu");
+        const body = document.querySelector("body");
+        burger.onclick = () => {
+        burger.classList.toggle("active");
+        nav.classList.toggle("active");
+        body.classList.toggle("lock");
+        }
+    </script>
 </body>
 
 </html>

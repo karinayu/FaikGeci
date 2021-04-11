@@ -53,6 +53,14 @@
         dialog = document.getElementById('ContactForm');
         dialog.style.display = "none";
       }
+      const burger = document.querySelector(".burger");
+      const nav = document.querySelector(".menu");
+      const body = document.querySelector("body");
+      burger.onclick = () => {
+      burger.classList.toggle("active");
+      nav.classList.toggle("active");
+      body.classList.toggle("lock");
+      }
     </script>
   </body>
 </html>
